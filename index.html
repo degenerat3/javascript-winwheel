@@ -27,10 +27,13 @@
 <html>
    
     <head>
-        <title>HTML5 Canvas Winning Wheel</title>
+        <title>PwnWheel</title>
         <link rel="stylesheet" href="main.css" type="text/css" />
         <script type="text/javascript" src="Winwheel.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     </head>
     <body>
         <div align="center">
@@ -100,7 +103,7 @@
                     'type'     : 'spinToStop',
                     'duration' : 5,
                     'spins'    : 8,
-                    'callbackFinished' : playSound2,
+                    'callbackFinished' : alertPrize,
                 },
                 'pins' :				// Turn pins on.
                 {
@@ -222,8 +225,12 @@
             // -------------------------------------------------------
             function alertPrize(indicatedSegment)
             {
+                playSound2();
                 // Do basic alert of the segment text. You would probably want to do something more interesting with this information.
-                alert("You'll be attacked by:\n " + indicatedSegment.text);
+                //alert("You'll be attacked by:\n " + indicatedSegment.text);
+                console.log("test");
+                //toastr.success("You'll be attacked by:\n " + indicatedSegment.text);
+                toastr.success("test")
             }
         </script>
     </body>
