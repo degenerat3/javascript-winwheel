@@ -100,8 +100,30 @@
                     'type'     : 'spinToStop',
                     'duration' : 5,
                     'spins'    : 8,
-                }
+                    'callbackFinished' : playSound2,
+                },
             });
+
+            // Loads the tick and airhorn audio sound in to an audio object.
+
+            let audio = new Audio('waiting.mp3')
+            let audio2 = new Audio('airhorn.mp3');
+
+            function playSound()
+            {
+                audio.pause();
+                audio.currentTime = 0;
+                audio.play()
+            }
+            
+            //This function plays the airhorn
+            function playSound2()
+            {
+                audio.pause();
+                audio2.pause();
+                audio2.currentTime = 0;
+                audio2.play();
+            }
 
             // Vars used by the code in this page to do power controls.
             let wheelPower    = 0;
@@ -146,6 +168,7 @@
             // -------------------------------------------------------
             function startSpin()
             {
+                playSound()
                 // Ensure that spinning can't be clicked again while already running.
                 if (wheelSpinning == false) {
                     // Based on the power level selected adjust the number of spins for the wheel, the more times is has
