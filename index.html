@@ -79,21 +79,21 @@
                 'segments'      :       // Define segments including colour and text.
                 [
                    {'fillStyle' : '#2B00FF', 'text' : '5min hands off', 'textFillStyle' : '#FFFFFF'},
-                   {'fillStyle' : '#FF0000', 'text' : 'Sing or else...'},
-                   {'fillStyle' : '#FF0000', 'text' : 'Service break'},
-                   {'fillStyle' : '#FF0000', 'text' : 'Change PW'},
+                   {'fillStyle' : '#FF0000', 'text' : 'Sing or else...', 'textFillStyle' : '#FFFFFF'},
+                   {'fillStyle' : '#FF0000', 'text' : 'Service break', 'textFillStyle' : '#FFFFFF'},
+                   {'fillStyle' : '#FF0000', 'text' : 'Change PW', 'textFillStyle' : '#FFFFFF'},
                    {'fillStyle' : '#B7B7B7', 'text' : 'No action'},
-                   {'fillStyle' : '#FF0000', 'text' : 'Lose GUI'},
-                   {'fillStyle' : '#FF0000', 'text' : 'No FW'},
-                   {'fillStyle' : '#FF0000', 'text' : 'RM rand bin'},
+                   {'fillStyle' : '#FF0000', 'text' : 'Lose GUI', 'textFillStyle' : '#FFFFFF'},
+                   {'fillStyle' : '#FF0000', 'text' : 'No FW', 'textFillStyle' : '#FFFFFF'},
+                   {'fillStyle' : '#FF0000', 'text' : 'RM rand bin', 'textFillStyle' : '#FFFFFF'},
+                   {'fillStyle' : '#B7B7B7', 'text' : 'Reee-spin'},
+                   {'fillStyle' : '#FF0000', 'text' : 'Push-ups or else...', 'textFillStyle' : '#FFFFFF'},
+                   {'fillStyle' : '#FF0000', 'text' : 'Logout all', 'textFillStyle' : '#FFFFFF'},
+                   {'fillStyle' : '#FF0000', 'text' : 'Deface site', 'textFillStyle' : '#FFFFFF'},
                    {'fillStyle' : '#B7B7B7', 'text' : 'No action'},
-                   {'fillStyle' : '#FF0000', 'text' : 'Push-ups or else...'},
-                   {'fillStyle' : '#FF0000', 'text' : 'Logout all'},
-                   {'fillStyle' : '#FF0000', 'text' : 'Deface site'},
-                   {'fillStyle' : '#B7B7B7', 'text' : 'No action'},
-                   {'fillStyle' : '#FF0000', 'text' : 'Flood shells'},
-                   {'fillStyle' : '#FF0000', 'text' : 'Isayno'},
-                   {'fillStyle' : '#FF0000', 'text' : 'Delete config'}
+                   {'fillStyle' : '#FF0000', 'text' : 'Flood shells', 'textFillStyle' : '#FFFFFF'},
+                   {'fillStyle' : '#FF0000', 'text' : 'Isayno', 'textFillStyle' : '#FFFFFF'},
+                   {'fillStyle' : '#FF0000', 'text' : 'Delete config', 'textFillStyle' : '#FFFFFF'}
                 ],
                 'animation' :           // Define spin to stop animation.
                 {
@@ -102,6 +102,12 @@
                     'spins'    : 8,
                     'callbackFinished' : playSound2,
                 },
+                'pins' :				// Turn pins on.
+                {
+                    'number'     : 16,
+                    'fillStyle'  : 'silver',
+                    'outerRadius': 4,
+                }
             });
 
             // Loads the tick and airhorn audio sound in to an audio object.
